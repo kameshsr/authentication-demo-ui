@@ -24,10 +24,19 @@ This app depends on below MOSIP components:
 * [kernel-keymanager-service](https://github.com/mosip/keymanager)
 * [kernel-core](https://github.com/mosip/commons/tree/master/kernel/kernel-core)
 
+# Config-Server
+To run Resident services, run [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
+
 ## Build
-The following command should be run in the project to build the application - 
+The following command should be run in the project to build the application -
 `mvn clean install -Dgpg.skip=true`
 
+## Build & run (for developers)
+Prerequisites:
+
+1. [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
+1. JDK 1.21
+1. Build and install:
 
 ## Update application launch script:
 Update the `ID-Authentication-Demo-UI.bat` batch file as below:
