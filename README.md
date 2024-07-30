@@ -25,7 +25,7 @@ This app depends on below MOSIP components:
 * [kernel-core](https://github.com/mosip/commons/tree/master/kernel/kernel-core)
 
 # Config-Server
-To run Resident services, run [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
+To run Authentication demo service, run [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
 
 ## Build
 The following command should be run in the project to build the application -
@@ -35,8 +35,11 @@ The following command should be run in the project to build the application -
 Prerequisites:
 
 1. [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
-1. JDK 1.21
-1. Build and install:
+2. JDK 1.21
+3. Build and install:
+4. Below Jar should be there in class path to run service
+   https://oss.sonatype.org/content/repositories/snapshots/io/mosip/kernel/kernel-auth-adapter/1.2.1-SNAPSHOT/kernel-auth-adapter-1.2.1-20240718.062459-116.jar
+
 
 ## Update application launch script:
 Update the `ID-Authentication-Demo-UI.bat` batch file as below:
