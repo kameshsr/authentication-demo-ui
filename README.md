@@ -29,20 +29,36 @@ To run Authentication demo service, run [Config Server](https://docs.mosip.io/1.
 
 ## Build & run (for developers)
 The project requires JDK 1.21.
+and mvn version - 3.9.6
 1. Build and install:
     ```
     $ cd authentication-demo-ui
     $ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true
     ```
+   
+### Remove the version-specific suffix (PostgreSQL95Dialect) from the Hibernate dialect configuration
+   ```
+   hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+   ```
+This is for better compatibility with future PostgreSQL versions.
+
+### Configure ANT Path Matcher for Spring Boot 3.x compatibility.
+   ```
+   spring.mvc.pathmatch.matching-strategy=ANT_PATH_MATCHER
+   ```
+This is to maintain compatibility with existing ANT-style path patterns.
 
 ### Add auth-adapter in a class-path to run a services
    ```
    <dependency>
        <groupId>io.mosip.kernel</groupId>
        <artifactId>kernel-auth-adapter</artifactId>
-       <version>${kernel.auth.adaptor.version}</version>
+       <version>${kernel.auth.adapter.version}</version>
    </dependency>
    ```
+
+## Configuration
+[Configuration-Application](https://github.com/mosip/mosip-config/blob/develop/application-default.properties) defined here.
 
 ## Update application launch script:
 Update the `ID-Authentication-Demo-UI.bat` batch file as below:
