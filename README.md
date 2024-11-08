@@ -28,7 +28,7 @@ This app depends on below MOSIP components:
 To run Authentication demo service, run [Config Server](https://docs.mosip.io/1.2.0/modules/module-configuration#config-server)
 
 ## Build & run (for developers)
-The project requires JDK 1.21.
+The project requires JDK 21.0.3.
 and mvn version - 3.9.6
 1. Build and install:
     ```
